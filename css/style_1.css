@@ -1,0 +1,17 @@
+p.dis-inline {
+    display:inline;
+}
+
+b.temp {
+    margin-left:2%;
+}
+
+
+a:link {
+    text-decoration:none;
+    color:#000000;
+    font-family: 等线;
+}
+a:visited {text-decoration:none}
+a:hover {text-decoration:underline}
+a:active {text-decoration:underline}
