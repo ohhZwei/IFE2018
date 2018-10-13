@@ -1,0 +1,89 @@
+.float {
+
+}
+
+.position {
+    position: relative;
+}
+
+.flex {
+    display: flex;
+    align-items: flex-start;
+}
+
+h2 {
+    margin: 0 auto;
+}
+
+header {
+    background-color: yellowgreen;
+}
+
+footer {
+    background-color: gray;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+}
+
+.float-lfix .left {
+    background-color: #898392;
+    float: left;
+    height: 500px;
+    width: 400px;
+    margin-right: 20px;         /*浮动元素外边距，不需知道固定元素的宽度*/
+}
+
+.float-lfix .right {
+    background-color: #964343;
+    height: 500px;
+    margin-left: 0;
+    overflow: hidden;           /*保证布局正常显示，引起BFC*/
+}
+
+.float-rfix .left {
+    background-color: #898392;
+    height: 500px;
+    margin-right: 0;
+    overflow: hidden;
+}
+
+.float-rfix .right {
+    background-color: #964343;
+    float: right;
+    height: 500px;
+    width: 400px;
+    margin-left: 20px;
+}
+
+.position .left {
+    background-color: #898392;
+    position: absolute;
+    height: 500px;
+    width: 300px;
+}
+
+.position .right {
+    background-color: #964343;
+    height: 500px;
+    margin-left: 80px;
+}
+
+.flex .left {
+    background-color: #898392;
+    height: 500px;
+    width: 200px;
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.flex .right {
+    background-color: #964343;
+    height: 500px;
+    flex: 1 1 auto;
+}
