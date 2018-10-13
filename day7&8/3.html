@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:align="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../bbs1.png">
+    <link rel="stylesheet" href="css/3.css" type="text/css">
+    <title>布局练习</title>
+</head>
+
+<body>
+        <div class="headarea">
+                <div class="container">
+                    <h1>LOGO</h1>
+                    <ul>
+                        <li><a>Github</a></li>
+                        <li><a>Register</a></li>
+                        <li><a>Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="banner">
+                <div class="container">
+                    <ul class="imgplaynum">
+                        <li><a href="">1</a></li>
+                        <li><a href="" class="actived">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+                <div class="naviarea">
+                    <div class="container" >
+                        
+                        <ul>
+                            <li><a href="#" class="actived">Home</a></li>
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">About</a></li>
+                        </ul>
+                    </div>
+                    <hr/>
+                </div>
+            
+                <div class="maininfo">
+                    <div class="container">
+                        <div class="active-panel">
+                                    <div class="flexbox">
+                                        <div class="content_1"><p>content1content1content</p></div>
+                                        <div class="content_1">content1</div>
+                                        <div class="content_1">content1</div>
+                                        <div class="content_1">content1</div>
+                                    </div>
+                                    <div class="flexbox">
+                                        <div class="content_1"><p>content1content1content</p></div>
+                                        <div class="content_1">content1</div>
+                                        <div class="content_1">content1</div>
+                                    </div>
+                                    <div class="flexbox">
+                                        <div class="content_1">content1</div>
+                                        <div class="content_1">content1</div>
+                                        <div class="content_1">content1</div>
+                                        <div class="content_1">content1</div>
+                                    </div>
+                        </div>
+                        <div class="panel">
+                                <div class="flexbox">
+                                        <div class="content_1">content2</div>
+                                        <div class="content_1">content2</div>
+                                        <div class="content_1">content2</div>
+                                        <div class="content_1">content2</div>
+                                </div>
+                                <div class="flexbox">
+                                        <div class="content_1"><p>content2content2content</p></div>
+                                        <div class="content_1">content2</div>
+                                        <div class="content_1">content2</div>
+                                        <div class="content_1">content2</div>
+                                    </div>
+                                    <div class="flexbox">
+                                        <div class="content_1"><p>content2content2content</p></div>
+                                        <div class="content_1">content2</div>
+                                        <div class="content_1">content2</div>
+                                    </div>
+        
+                        </div>
+                        <div class="panel">
+                                
+                                    <div class="flexbox">
+                                        <div class="content_1">content3</div>
+                                        <div class="content_1">content3</div>
+                                        <div class="content_1">content3</div>
+                                        <div class="content_1">content3</div>
+                                    </div>
+                                    <div class="flexbox">
+                                        <div class="content_1"><p>content3content3content3</p></div>
+                                        <div class="content_1">content3</div>
+                                        <div class="content_1">content3</div>
+                                        <div class="content_1">content3</div>
+                                    </div>
+                                    <div class="flexbox">
+                                        <div class="content_1"><p>content3content3content3</p></div>
+                                        <div class="content_1">content3</div>
+                                        <div class="content_1">content3</div>
+                                    </div>
+        
+                        </div>
+                    </div>
+                </div>
+</body>
+
+
+<div class="footarea">
+    <br/>
+    <footer>2018 ife.baidu.com</footer>
+</div>
+
+
+</html>
+
+<script>
+    var tabs = document.querySelectorAll('.naviarea li a');    
+    var panels = document.querySelectorAll('.active-panel, .panel');
+
+    for (i = 0; i < tabs.length; i++) {
+        var tab = tabs[i];
+        setTabHandler(tab, i);
+    }
+    /*alert('panels.length = ' + panels.length);*/
+    function setTabHandler(tab, tabPos) {
+        tab.onclick = function() {
+            for (i = 0; i < tabs.length; i++) {
+                if (tabs[i].getAttribute('class')) {
+                    tabs[i].removeAttribute('class');
+                }
+            }
+            tab.setAttribute('class', 'actived');
+
+            for (i = 0; i < panels.length; i++) {
+                panels[i].removeAttribute('class');
+                panels[i].setAttribute('class', 'panel');
+                
+            }
+            panels[tabPos].removeAttribute('class');
+            panels[tabPos].setAttribute('class', 'active-panel');
+            /*alert(tabPos);*/
+        }
+    }
+</script>

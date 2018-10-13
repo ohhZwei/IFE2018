@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:align="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../bbs1.png">
+    <title>三栏自适应布局</title>
+    <link href="css/2_1.css" rel="stylesheet" tpye="text/css" id="css">
+</head>
+<body>
+    <button id="btn-1" onclick="changestyle(1)">中间栏自适应宽度</button>
+    <button id="btn-2" onclick="changestyle(2)">最右栏自适应宽度</button>
+    <br/>
+    <br/>
+    <header id="header"><b>Header内容区,中间栏自适应宽度</b></header>
+    <div class="container">
+        
+        <div class="middle"><p>当然，你可以左侧有多个浮动，或者左浮动+右浮动。于是，我们不仅可以实现两栏自适应效果，多栏自适应效果也不在话下。
+                然而，利用块状元素流体特性实现的自适应布局有个不足，就是，我们需要知道浮动或绝对定位内容的尺寸。然后，流体内容才能有对应的margin或padding或border值进行位置修正。于是，问题来了，我们没法单纯使用一个公用的类名，类似.clearfix这样，整站通用。因为不同自适应场景的留白距离是不一样的。
+                此时，我们可以利用块状元素的BFC特定实现更强大更智能的多栏自适应布局（本文重点）</p></div> 
+        <div class="left" id="left"><b>左边栏</b></div>
+        <div class="right"><b>右边栏</b></div>
+    </div>
+    <footer><b>Footer内容区</b></footer>
+</body>
+
+</html>
+
+<script>
+    function changestyle(choose) {
+        var css = document.getElementById("css");
+        var head = document.getElementById("header");
+        var middleinfo = document.getElementById("left");
+        if (choose == 1) {
+            css.setAttribute("href", "css/2_1.css");
+            head.innerHTML = "<b>Header内容区,中间栏自适应宽度</b>";
+            middleinfo.innerHTML = "<b>左边栏</b>";
+        }
+        else if (choose == 2) {
+            css.setAttribute("href", "css/2_2.css");
+            head.innerHTML = "<b>Header内容区,最右栏自适应宽度</b>";
+            middleinfo.innerHTML = "<b><del>左边栏</del><br/>中间栏</b>";
+        }
+    }
+</script>

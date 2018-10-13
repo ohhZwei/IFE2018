@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:align="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../bbs1.png">
+    <title>圣杯布局</title>
+    <style>
+        header{width: 100%;height: 40px;background-color: darkseagreen;}
+        .container{ height:200px; text-align: left; padding: 0 200px;}
+        .middle{width: 100%;;max-height: 1000px; min-height: 200px;background-color: #f3f3f3; float: left;  padding: 0 5px; box-sizing: border-box;}
+        .left{ width: 200px;height: 200px; background-color: aqua; border-width: 15px; border-color: gray;float:left; border-radius: 5px; margin-left: -100%; position: relative; left: -200px;}
+        .right{width: 200px;height: 200px;background-color: darkorchid;float:left;border-radius: 5px; margin-left: -200px; position: relative; right: -200px;}
+        footer {background-color: #902141}
+    </style>
+</head>
+<body>
+    <header><b>Header内容区</b></header>
+    <div class="container">
+        <div class="middle"><p>当然，你可以左侧有多个浮动，或者左浮动+右浮动。于是，我们不仅可以实现两栏自适应效果，多栏自适应效果也不在话下。
+                然而，利用块状元素流体特性实现的自适应布局有个不足，就是，我们需要知道浮动或绝对定位内容的尺寸。然后，流体内容才能有对应的margin或padding或border值进行位置修正。于是，问题来了，我们没法单纯使用一个公用的类名，类似.clearfix这样，整站通用。因为不同自适应场景的留白距离是不一样的。
+                此时，我们可以利用块状元素的BFC特定实现更强大更智能的多栏自适应布局（本文重点）</p></div> 
+        <div class="left"><b>左边栏</b></div> 
+        <div class="right"><b>右边栏</b></div>
+    </div>
+    <footer><b>Footer内容区</b></footer>
+</body>
+
+</html>
