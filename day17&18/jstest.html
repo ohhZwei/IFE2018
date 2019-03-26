@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+
+</head>
+<body>
+    <h1>Demo</h1>
+    <span>有符号右移, -64 >> = </span><span id="moveright"></span>
+    <br/>
+    <button id="move-btn">右移</button>
+    <br/>
+    <h2>typeof 操作符使用</h2>
+    <span>未声明变量a = </span><span id="a"></span>
+    <br/>
+    <span>未初始化变量b = </span><span id="b"></span>
+    <br/>
+    <span>空指针对象c = </span><span id="c"></span>
+    <br/>
+    <span>布尔值d = </span><span id="d"></span>
+    <br/>
+    
+    <button id="datatype-btn">数据类型测试</button>
+    <h2>操作符</h2>
+    <p>布尔操作符</p>
+    <p>逻辑与，&&</p>
+    <span>whatever = null/undefined/NaN</span>
+    <br/>
+    <span>obj1 && ope_t = </span><span id="bl1"></span>
+    <br/>
+    <span>ope_t && obj1 = </span><span id="bl2"></span>
+    <br/>
+    <span>ope_f && obj1 = </span><span id="bl3"></span>
+    <br/>
+    <span>obj1 && obj2 = </span><span id="obj"></span>
+    <br/>
+    <span>whatever && ope_t = </span><span id="null1"></span>
+    <br/>
+    <span>ope_t && whatever = </span><span id="null2"></span>
+    <br/>
+    <button id="calcha-btn">操作符测试</button>
+
+    <h2>加性操作符</h2>
+    <span>5 + 5 = </span><span id="plusch1"></span><br/>
+    <span>5 + "5" = </span><span id="plusch2"></span><br/>
+    <span>"5" + 5 = </span><span id="plusch3"></span><br/>
+    <button id="plusch-btn">加性操作符测试</button>
+
+    <h2>关系操作符</h2>
+    <span>a < B = </span><span id="comp1"></span><br/>
+    <span>A < b = </span><span id="comp2"></span><br/>
+    <span>5 < "4" = </span><span id="comp3"></span><br/>
+    <span>5 < a = </span><span id="comp4"></span><br/>
+    <span>abc < abd = </span><span id="comp5"></span><br/>
+    <button id="comp-btn">关系操作符测试</button>
+
+    <h2>Day16test</h2>
+    <input id="first-number" type="number" value="0" placeholder="第一个数字">
+    <input id="second-number" type="number" value="0" placeholder="第二个数字">
+    <button id="add-btn">加</button>
+    <button id="minus-btn">减</button>
+    <button id="times-btn">乘</button>
+    <button id="divide-btn">除</button>
+    <span id="error"></span>
+    <p id="result">运算结果</p>
+
+    <h2>Day17&18test</h2>
+    <input id="dec-number" type="number" placeholder="输入一个十进制非负整数">
+    <input id="binbit-length" type="number" placeholder="输入二进制码宽度">
+    <button id="trans-btn" onclick="dec2bin()">转化为二进制</button>
+    <span id="dec-error" style="color: red;"></span>
+    <p id="dec2bin-result">运算结果</p>
+
+
+    <script src="test.js"></script>
+</body>
+</html>
